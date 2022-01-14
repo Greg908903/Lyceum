@@ -30,7 +30,10 @@ class Example(QMainWindow):
 
     def draw(self, qp) -> None:
         count = randint(2, 6)
-        p = QPen(QColor(255, 255, 0), 2)
+        red = randint(0, 255)
+        green = randint(0, 255)
+        blue = randint(0, 255)
+        p = QPen(QColor(red, green, blue), 2)
         qp.setPen(p)
         for i in range(count):
             d = randint(30, 200)
