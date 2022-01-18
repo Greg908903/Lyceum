@@ -2,15 +2,15 @@ import sys
 
 from random import randint
 
-from PyQt5 import uic
 from PyQt5.QtGui import QPainter, QColor, QPen
 from PyQt5.QtWidgets import QApplication, QLabel, QMainWindow, QFileDialog
+from ui import Ui_MainWindow
 
 
-class Example(QMainWindow):
+class Example(QMainWindow, Ui_MainWindow):
     def __init__(self) -> None:
         super().__init__()
-        uic.loadUi("UI.ui", self)
+        self.setupUi(self)
         self.initUI()
 
     def initUI(self) -> None:
